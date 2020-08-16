@@ -32,6 +32,7 @@ main{
 .card{
     margin-top: 20px;
     position: relative;
+    opacity: 0;
 } 
 .card img{
     width: 85%;

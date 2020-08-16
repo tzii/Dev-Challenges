@@ -67,11 +67,15 @@
     <!-- end footer  -->
     <script>
         window.onload =()=>{
-            gsap.from(".card", {
-            duration: 1,
+            gsap.fromTo(".card", {
             y: 100,
             opacity: 0,
-            stagger: 0.2
+        },
+        {
+            duration: 1,
+            y: 0,
+            opacity: 1,
+            stagger: 0.3
         });
         }
     </script>
