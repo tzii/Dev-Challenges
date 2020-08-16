@@ -13,6 +13,7 @@ body{
 .logo{
     font-family: 'PT Serif';
     font-size: var(--fs-header-logo);
+    margin-bottom: 30px;
 }
 .who{
     font-family: 'Poppins';
@@ -51,9 +52,6 @@ main{
     font-family: 'Poppins';
     font-size: var(--fs-card-name);
     font-weight: 600;
-}
-.card:nth-child(3n-1){
-    margin-top: 120px;
 }
 footer{
     width: 100%;
@@ -102,6 +100,9 @@ footer{
     .col-sm-6{
         width: 50%;
     }
+    .card:nth-child(2n){
+        margin-top: 120px;
+    }
 }
 @media screen and (min-width: 768px){
     html{
@@ -123,5 +124,8 @@ footer{
     }
     .col-md-4{
         width: 33.33%;
+    }
+    .card:nth-child(3n-1){
+        margin-top: 120px;
     }
 }
