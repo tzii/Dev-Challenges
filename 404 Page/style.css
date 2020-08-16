@@ -55,9 +55,6 @@ main{
     font-size: var(--fs-noti-header);
     line-height: var(--fh-noti-header);
     letter-spacing: -0.035em;
-    transform: rotate(360deg);
-    transition: linear 1s;
-    animtaio
 }
 .content-noti{
     font-style: normal;
