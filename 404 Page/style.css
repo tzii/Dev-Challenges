@@ -55,6 +55,9 @@ main{
     font-size: var(--fs-noti-header);
     line-height: var(--fh-noti-header);
     letter-spacing: -0.035em;
+    transform: rotate(360deg);
+    transition: linear 1s;
+    animtaio
 }
 .content-noti{
     font-style: normal;
@@ -95,8 +98,11 @@ footer{
 .col-6{
     width: 60%;
 }
-.bg-gray{
+.btn-gray{
     background-color: #333333;
+}
+.btn-gray:hover{
+    background-color: #222222;
 }
 .mb-1{
     margin-bottom: 20px;
