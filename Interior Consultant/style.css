@@ -1,102 +1,108 @@
-html{
-    --fs-title: 48px;
-    --fs-content: 24px;
-    --fs-btn: 18px;
-    --fs-name: 14px;
-    --fs-office: 12px;
-    --fs-time: 24px;
-}
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
-ul{
+ul {
     list-style: none;
 }
-body{
+body {
     background-color: #181719;
     color: white;
 }
-.navbar{
-    padding-top: 42px;
-    padding-bottom: 42px;
-}
-.navbar .container{
+
+.navbar .container {
     display: flex;
     justify-content: space-between;
 }
-.navbar-brand{
-    border: 1px solid #FFFFFF;
+.navbar-brand {
+    border: 1px solid #ffffff;
     padding: 8px;
-    font-family: 'Crimson Pro';
+    font-family: "Crimson Pro";
     font-weight: 200;
     font-size: 14px;
     line-height: 16px;
     display: block;
 }
-.navbar-toggler{
-    display: none;
-}
 .bar1,
 .bar2,
-.bar3{
+.bar3 {
     width: 35px;
     height: 5px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     margin: 6px 0;
     transition: 0.4s;
 }
-.navbar-nav{
+.navbar-toggler{
+    z-index: 1000;
+}
+.navbar-toggler:not(.collapsed){
+    position: fixed;
+    right: 15px;
+}
+.navbar-toggler:not(.collapsed) .bar1 {
+    transform: translate(0, 11px) rotate(45deg);
+}
+.navbar-toggler:not(.collapsed) .bar2 {
+    opacity: 0;
+}
+.navbar-toggler:not(.collapsed) .bar3 {
+    transform: translate(0, -11px) rotate(-45deg);
+}
+
+.navbar-collapse {
+}
+.navbar-nav {
     display: flex;
 }
-.nav-item{
-    margin-left: 50px;
-}
-.nav-link{
-    font-family: 'Montserrat';
+.nav-link {
+    font-family: "Montserrat";
     font-weight: 500;
     font-style: 18px;
 }
-.nav-item.active .nav-link{
+.nav-link:hover {
     font-weight: bold;
 }
-main{
+.nav-item.active .nav-link {
+    font-weight: bold;
+}
+main {
     margin-top: 20px;
 }
-.heading{
+.heading {
     padding-right: 20px;
+    margin-bottom: 40px;
 }
-.title{
-    font-family: 'Lora';
+.title {
+    font-family: "Lora";
     font-weight: normal;
     font-size: var(--fs-title);
     font-style: normal;
     margin-bottom: 30px;
 }
-.content{
-    font-family: 'Montserrat';
+.content {
+    font-family: "Montserrat";
     font-weight: 300;
     font-size: var(--fs-content);
     margin-bottom: 30px;
 }
-.btn{
-    font-family: 'Montserrat';
+.btn {
+    font-family: "Montserrat";
     font-weight: 600;
     font-size: var(--fs-btn);
 }
-.picture{
+.picture {
     width: 100%;
 }
-.pic{
+.pic {
     position: relative;
     margin-bottom: 100px;
 }
-.card{
+.card {
     min-width: 290px;
     position: absolute;
     left: 20%;
@@ -107,50 +113,50 @@ main{
     align-items: center;
     background: #181719;
     padding: 18px 97px 34px 26px;
-    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-.card .avatar{
+.card .avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
 }
-.avatar img{
+.avatar img {
     width: 100%;
 }
-.card .detail{
+.card .detail {
     margin-left: 15px;
 }
-.detail .name{
-    font-family: 'Montserrat';
+.detail .name {
+    font-family: "Montserrat";
     font-weight: 500;
     font-size: var(--fs-name);
 }
-.detail .office{
-    font-family: 'Montserrat';
+.detail .office {
+    font-family: "Montserrat";
     font-weight: 500;
     font-size: var(--fs-office);
     color: #828282;
 }
-.time{
+.time {
     margin-top: 20px;
 }
-.time p{
-    font-family: 'Lora';
+.time p {
+    font-family: "Lora";
     font-weight: bold;
     font-style: var(--fs-time);
 }
-footer{
+footer {
     width: 100%;
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    margin:20px auto;
-    color: #A9A9A9;
+    margin: 20px auto;
+    color: #a9a9a9;
 }
-.container{
+.container {
     max-width: 992px;
     margin-left: auto;
     margin-right: auto;
@@ -158,25 +164,118 @@ footer{
     padding-left: 15px;
     padding-right: 15px;
 }
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
 }
-[class*="col-"]{
+[class*="col-"] {
     padding-left: 15px;
     padding-right: 15px;
 }
-.col-1{max-width: 8.33%;}
-.col-2{max-width: 16.67%;}
-.col-3{max-width: 25%;}
-.col-4{max-width: 33.33%;}
-.col-5{max-width: 41.67%;}
-.col-6{max-width: 50%;}
-.col-7{max-width: 58.33%;}
-.col-8{max-width: 66.67%;}
-.col-9{max-width: 75%;}
-.col-10{max-width: 83.33%;}
-.col-11{max-width: 91.67%;}
-.col-12{max-width: 100%;}
+
+/* Reponsive */
+@media screen and (min-width: 768px) {
+    html {
+        --fs-title: 36px;
+        --fs-content: 14px;
+        --fs-btn: 14px;
+        --fs-name: 12px;
+        --fs-office: 10px;
+        --fs-time: 18px;
+    }
+    .col-1 {
+        max-width: 8.33%;
+    }
+    .col-2 {
+        max-width: 16.67%;
+    }
+    .col-3 {
+        max-width: 25%;
+    }
+    .col-4 {
+        max-width: 33.33%;
+    }
+    .col-5 {
+        max-width: 41.67%;
+    }
+    .col-6 {
+        max-width: 50%;
+    }
+    .col-7 {
+        max-width: 58.33%;
+    }
+    .col-8 {
+        max-width: 66.67%;
+    }
+    .col-9 {
+        max-width: 75%;
+    }
+    .col-10 {
+        max-width: 83.33%;
+    }
+    .col-11 {
+        max-width: 91.67%;
+    }
+    .col-12 {
+        max-width: 100%;
+    }
+    .navbar {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar-collapse {
+        display: block;
+    }
+    .nav-item {
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 768px) {
+    [class*="col-"] {
+        max-width: 100%;
+    }
+    html {
+        --fs-title: 48px;
+        --fs-content: 24px;
+        --fs-btn: 18px;
+        --fs-name: 14px;
+        --fs-office: 12px;
+        --fs-time: 24px;
+    }
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 42px;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+    .navbar-collapse {
+        position: fixed;
+        width: 100%;
+        height: 0vh;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background-color: #181719;
+        transition: 0.4s;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+    .navbar-nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-collapse.show {
+        height: 100vh;
+        opacity: 1;
+    }
+}
