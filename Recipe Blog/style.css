@@ -1,15 +1,3 @@
-html {
-    --fs-title-blog: 48px;
-    --fs-intro-blog: 14px;
-    --fs-banking-time-name: 10px;
-    --fs-banking-time: 14px;
-    --fs-ingredients: 24px;
-    --fs-ingredient-title: 18px;
-    --fs-ingredient-item: 16px;
-    --fs-instructions: 24px;
-    --fs-instruction-content: 16px;
-    --fs-source: 16px;
-}
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +9,6 @@ a {
 }
 body {
     background-color: #ffffff;
-}
-header {
-    margin-top: 50px;
 }
 .title-blog h1 {
     font-family: "Playfair Display";
@@ -45,21 +30,19 @@ header {
 .image img {
     width: 100%;
 }
-.banking-time-items {
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 12px;
-}
 .banking-time-item {
+    padding: 20px 0;
     display: flex;
     align-items: center;
-    font-family: Montserrat;
-    padding: 20px 40px;
 }
 .banking-time-item .icon {
     margin-right: 12px;
 }
 .banking-time-item .icon .material-icons {
     font-size: 36px;
+}
+.banking-time-item .info {
+    font-family: Montserrat;
 }
 .banking-time-item .info .banking-time-name {
     font-weight: bold;
@@ -228,42 +211,6 @@ footer {
     padding-left: 15px;
     padding-right: 15px;
 }
-.col-1 {
-    max-width: 8.33%;
-}
-.col-2 {
-    max-width: 16.67%;
-}
-.col-3 {
-    max-width: 25%;
-}
-.col-4 {
-    max-width: 33.33%;
-}
-.col-5 {
-    max-width: 41.67%;
-}
-.col-6 {
-    max-width: 50%;
-}
-.col-7 {
-    max-width: 58.33%;
-}
-.col-8 {
-    max-width: 66.67%;
-}
-.col-9 {
-    max-width: 75%;
-}
-.col-10 {
-    max-width: 83.33%;
-}
-.col-11 {
-    max-width: 91.67%;
-}
-.col-12 {
-    max-width: 100%;
-}
 .mb-0 {
     margin-bottom: 5px;
 }
@@ -275,4 +222,130 @@ footer {
 }
 .mb-3 {
     margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    html {
+        --fs-title-blog: 24px;
+        --fs-intro-blog: 12px;
+        --fs-banking-time-name: 8px;
+        --fs-banking-time: 10px;
+        --fs-ingredients: 18px;
+        --fs-ingredient-title: 16px;
+        --fs-ingredient-item: 14px;
+        --fs-instructions: 24px;
+        --fs-instruction-content: 16px;
+        --fs-source: 12px;
+    }
+    header {
+        margin-top: 15px;
+    }
+    .banking-time-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .banking-time-item:first-child {
+        padding-bottom: 0;
+    }
+    .col-sm-1 {
+        max-width: 8.33%;
+    }
+    .col-sm-2 {
+        max-width: 16.67%;
+    }
+    .col-sm-3 {
+        max-width: 25%;
+    }
+    .col-sm-4 {
+        max-width: 33.33%;
+    }
+    .col-sm-5 {
+        max-width: 41.67%;
+    }
+    .col-sm-6 {
+        max-width: 50%;
+    }
+    .col-sm-7 {
+        max-width: 58.33%;
+    }
+    .col-sm-8 {
+        max-width: 66.67%;
+    }
+    .col-sm-9 {
+        max-width: 75%;
+    }
+    .col-sm-10 {
+        max-width: 83.33%;
+    }
+    .col-sm-11 {
+        max-width: 91.67%;
+    }
+    .col-sm-12 {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    html {
+        --fs-title-blog: 48px;
+        --fs-intro-blog: 14px;
+        --fs-banking-time-name: 10px;
+        --fs-banking-time: 14px;
+        --fs-ingredients: 24px;
+        --fs-ingredient-title: 18px;
+        --fs-ingredient-item: 16px;
+        --fs-instructions: 24px;
+        --fs-instruction-content: 16px;
+        --fs-source: 16px;
+    }
+    header {
+        margin-top: 50px;
+    }
+    .image {
+        margin-bottom: 30px;
+    }
+    .banking-time-items {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 20px 40px;
+    }
+    .col-1 {
+        max-width: 8.33%;
+    }
+    .col-2 {
+        max-width: 16.67%;
+    }
+    .col-3 {
+        max-width: 25%;
+    }
+    .col-4 {
+        max-width: 33.33%;
+    }
+    .col-5 {
+        max-width: 41.67%;
+    }
+    .col-6 {
+        max-width: 50%;
+    }
+    .col-7 {
+        max-width: 58.33%;
+    }
+    .col-8 {
+        max-width: 66.67%;
+    }
+    .col-9 {
+        max-width: 75%;
+    }
+    .col-10 {
+        max-width: 83.33%;
+    }
+    .col-11 {
+        max-width: 91.67%;
+    }
+    .col-12 {
+        max-width: 100%;
+    }
 }
