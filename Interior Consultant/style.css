@@ -37,10 +37,10 @@ body {
     margin: 6px 0;
     transition: 0.4s;
 }
-.navbar-toggler{
+.navbar-toggler {
     z-index: 1000;
 }
-.navbar-toggler:not(.collapsed){
+.navbar-toggler:not(.collapsed) {
     position: fixed;
     right: 15px;
 }
@@ -52,9 +52,6 @@ body {
 }
 .navbar-toggler:not(.collapsed) .bar3 {
     transform: translate(0, -11px) rotate(-45deg);
-}
-
-.navbar-collapse {
 }
 .navbar-nav {
     display: flex;
@@ -269,7 +266,7 @@ footer {
         align-items: center;
         opacity: 0;
     }
-    .navbar-nav{
+    .navbar-nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
