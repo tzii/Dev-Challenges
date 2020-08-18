@@ -1,0 +1,278 @@
+html {
+    --fs-title-blog: 48px;
+    --fs-intro-blog: 14px;
+    --fs-banking-time-name: 10px;
+    --fs-banking-time: 14px;
+    --fs-ingredients: 24px;
+    --fs-ingredient-title: 18px;
+    --fs-ingredient-item: 16px;
+    --fs-instructions: 24px;
+    --fs-instruction-content: 16px;
+    --fs-source: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-color: #ffffff;
+}
+header {
+    margin-top: 50px;
+}
+.title-blog h1 {
+    font-family: "Playfair Display";
+    font-size: var(--fs-title-blog);
+}
+.intro-blog {
+    display: flex;
+}
+.intro-blog .six-dots {
+    width: 50px;
+}
+.intro-blog .intro-blog-content {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 500;
+    font-size: var(--fs-intro-blog);
+    color: #4f4f4f;
+}
+.image img {
+    width: 100%;
+}
+.banking-time-items {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+}
+.banking-time-item {
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    padding: 20px 40px;
+}
+.banking-time-item .icon {
+    margin-right: 12px;
+}
+.banking-time-item .icon .material-icons {
+    font-size: 36px;
+}
+.banking-time-item .info .banking-time-name {
+    font-weight: bold;
+    font-size: var(--fs-banking-time-name);
+    color: #bdbdbd;
+    margin-bottom: 5px;
+}
+.banking-time-item:first-child .icon .material-icons,
+.banking-time-item:first-child .info .banking-time {
+    color: #f2994a;
+}
+.banking-time-item .info .banking-time {
+    font-weight: 500;
+    font-size: var(--fs-banking-time);
+    color: #333333;
+    font-style: normal;
+}
+.ingredients h2,
+.ingredient-title,
+.instructions h2 {
+    font-family: "Playfair Display";
+}
+.ingredients h2 {
+    font-size: var(--fs-ingredients);
+}
+.ingredient-title {
+    font-style: italic;
+    font-weight: normal;
+    font-size: var(--fs-ingredient-title);
+}
+.ingerdient-item {
+    position: relative;
+    font-family: "Montserrat";
+    font-size: var(--fs-ingredient-item);
+    line-height: 25px;
+    padding-left: 30px;
+    font-weight: normal;
+}
+.ingerdient-item:not(:last-child) {
+    margin-bottom: 5px;
+}
+.ingerdient-item label {
+    cursor: pointer;
+}
+.ingerdient-item > label > i {
+    font-weight: 500;
+}
+.ingerdient-item label input {
+    opacity: 0;
+}
+.ingerdient-item label .check-mark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in;
+}
+.ingerdient-item label .check-mark:hover {
+    background-color: #bdbdbd;
+}
+.ingerdient-item label input:checked + .check-mark {
+    background-color: #f2994a;
+}
+.check-mark::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 7.5px;
+    border: #ffffff solid;
+    border-width: 3px 0 0 3px;
+    transition: all 0.2s ease-in;
+    transform: rotate(-135deg);
+    transform-origin: 0% 0%;
+}
+.ingerdient-item label input:not(:checked) + .check-mark::after {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+.ingerdient-item label input:checked + .check-mark::after {
+    width: 5px;
+    height: 12px;
+    opacity: 1;
+}
+.instructions h2 {
+    font-size: var(--fs-instructions);
+}
+.instruction-item {
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.instruction-item:last-child {
+    margin-bottom: 40px;
+}
+.instruction-number {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background: #f2994a;
+    border-radius: 6px;
+    font-family: "Playfair Display";
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.instruction-content {
+    font-family: "Montserrat";
+    font-size: var(--fs-instruction-content);
+    font-weight: normal;
+}
+.source {
+    font-family: Montserrat;
+    font-style: italic;
+    font-size: var(--fs-source);
+    font-weight: normal;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 20px auto;
+    color: #a9a9a9;
+}
+.container {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row.reverse.space-between {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.text-gray-1 {
+    color: #333333;
+}
+.text-gray-2 {
+    color: #4f4f4f;
+}
+.text-gray-4 {
+    color: #bdbdbd;
+}
+
+[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-1 {
+    max-width: 8.33%;
+}
+.col-2 {
+    max-width: 16.67%;
+}
+.col-3 {
+    max-width: 25%;
+}
+.col-4 {
+    max-width: 33.33%;
+}
+.col-5 {
+    max-width: 41.67%;
+}
+.col-6 {
+    max-width: 50%;
+}
+.col-7 {
+    max-width: 58.33%;
+}
+.col-8 {
+    max-width: 66.67%;
+}
+.col-9 {
+    max-width: 75%;
+}
+.col-10 {
+    max-width: 83.33%;
+}
+.col-11 {
+    max-width: 91.67%;
+}
+.col-12 {
+    max-width: 100%;
+}
+.mb-0 {
+    margin-bottom: 5px;
+}
+.mb-1 {
+    margin-bottom: 15px;
+}
+.mb-2 {
+    margin-bottom: 25px;
+}
+.mb-3 {
+    margin-bottom: 30px;
+}
