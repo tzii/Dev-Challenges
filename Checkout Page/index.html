@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout Page</title>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Checkout</h1>
+            </div>
+        </header>
+        <!-- end header  -->
+        <main>
+            <div class="container">
+                <div class="row checkout">
+                    <div class="col-5">
+                        <div class="cart">
+                            <div class="items">
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <img src="Pics/photo1.png" alt="" />
+                                    </div>
+                                    <div class="item-infor">
+                                        <div class="item-name">
+                                            Vintage Backbag
+                                        </div>
+                                        <div class="price">
+                                            <div class="discount">
+                                                $54.99
+                                            </div>
+                                            <div class="non-discount">
+                                                $94.99
+                                            </div>
+                                        </div>
+                                        <div class="item-count">
+                                            <div class="count-border">
+                                                <div class="count">1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <img src="Pics/photo2.png" alt="" />
+                                    </div>
+                                    <div class="item-infor">
+                                        <div class="item-name">
+                                            Levi Shoes
+                                        </div>
+                                        <div class="price">
+                                            <div class="discount">
+                                                $74.99
+                                            </div>
+                                            <div class="non-discount">
+                                                $124.99
+                                            </div>
+                                        </div>
+                                        <div class="item-count">
+                                            <div class="count-border">
+                                                <div class="minus"></div>
+                                                <div class="count">1</div>
+                                                <div class="plus"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <p class="shipping">
+                                <span>Shipping</span>
+                                <span>$19</span>
+                            </p>
+                            <hr />
+                            <p class="total">
+                                <span>Total</span>
+                                <span>$148.98</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <form action="">
+                            <div class="contact-infor">
+                                <h2>Contact infomation</h2>
+                                <div class="email">
+                                    <label for="email">E-mail</label><br />
+                                    <input
+                                        type="email"
+                                        name="Email"
+                                        id="email"
+                                        placeholder="Enter your email..."
+                                    />
+                                </div>
+                                <div class="phone">
+                                    <label for="phone">Phone</label><br />
+                                    <input
+                                        type="tel"
+                                        name=""
+                                        id=""
+                                        placeholder="Enter your phone..."
+                                    />
+                                </div>
+                            </div>
+                            <div class="shipping-address">
+                                <h2>Shipping address</h2>
+                                <div class="full-name">
+                                    <label for="name">Full name</label><br />
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Your full name..."
+                                        value="Rodney Cotton"
+                                    />
+                                </div>
+                                <div class="address">
+                                    <label for="address">Address</label><br />
+                                    <input
+                                        type="text"
+                                        name="address"
+                                        id="address"
+                                        placeholder="Your address.."
+                                    />
+                                </div>
+                                <div class="city">
+                                    <label for="city">City</label><br />
+                                    <input
+                                        type="text"
+                                        name="city"
+                                        id="city"
+                                        placeholder="Your city.."
+                                    />
+                                </div>
+                                <div class="country">
+                                    <label for="country">Country</label><br />
+                                    <input
+                                        type="text"
+                                        name="country"
+                                        id="country"
+                                        placeholder="Your country.."
+                                    />
+                                </div>
+                                <div class="postal-code">
+                                    <label for="code">Postal code</label><br />
+                                    <input
+                                        type="text"
+                                        name="code"
+                                        id="code"
+                                        placeholder="Your postal code.."
+                                    />
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        Save this information for next time
+                                        <input type="checkbox" name="" id="" />
+                                        <span class="check-mark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <button type="submit">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- end main  -->
+        <footer>
+            <p class="license">
+                <a href="https://github.com/Shoji5">Tuấn Vũ</a> @
+                <a href="https://devchallenges.io/">DevChallenges.io</a>
+            </p>
+        </footer>
+        <!-- end footer  -->
+        <script src="script.js"></script>
+    </body>
+</html>
