@@ -45,7 +45,13 @@
                                         </div>
                                         <div class="item-count">
                                             <div class="count-border">
-                                                <div class="count">1</div>
+                                                <i class="material-icons">
+                                                    remove
+                                                </i>
+                                                <div class="count">2</div>
+                                                <i class="material-icons">
+                                                    add
+                                                </i>
                                             </div>
                                         </div>
                                     </div>
@@ -68,9 +74,13 @@
                                         </div>
                                         <div class="item-count">
                                             <div class="count-border">
-                                                <div class="minus"></div>
+                                                <i class="material-icons">
+                                                    remove
+                                                </i>
                                                 <div class="count">1</div>
-                                                <div class="plus"></div>
+                                                <i class="material-icons">
+                                                    add
+                                                </i>
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +99,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <form action="">
+                        <form>
                             <div class="contact-infor">
                                 <h2>Contact infomation</h2>
                                 <div class="email">
@@ -143,6 +153,9 @@
                                 </div>
                                 <div class="country">
                                     <label for="country">Country</label><br />
+                                    <i class="material-icons">
+                                        keyboard_arrow_down
+                                    </i>
                                     <input
                                         type="text"
                                         name="country"
@@ -150,11 +163,7 @@
                                         placeholder="Your country.."
                                         disabled
                                     />
-                                    <!-- <select name="country" id="country">
-                                        <option value="1">Viet Nam</option>
-                                        <option value="2">Singapor</option>
-                                        <option value="3">China</option>
-                                    </select> -->
+                                    <div class="select-country"></div>
                                 </div>
                                 <div class="postal-code">
                                     <label for="code">Postal code</label><br />
@@ -174,7 +183,7 @@
                                 </div>
                             </div>
                             <div class="btn">
-                                <button type="submit">Continue</button>
+                                <button>Continue</button>
                             </div>
                         </form>
                     </div>

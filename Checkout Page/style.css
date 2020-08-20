@@ -84,24 +84,21 @@ header h1 {
     text-align: center;
     font-size: 16px;
 }
-.count-border::after,
-.count-border::before {
-    font-family: "Material Icons";
+.count-border i,
+.count-border i {
+    position: absolute;
     font-size: 24px;
     color: var(--gray-3);
-    position: absolute;
     background-color: var(--gray-5);
     top: 50%;
     border-radius: 4px;
     transform: translate(0, -50%);
     cursor: pointer;
 }
-.count-border::after {
-    content: "remove";
+.count-border i:first-child {
     left: 7%;
 }
-.count-border::before {
-    content: "add";
+.count-border i:last-child {
     right: 7%;
 }
 .items + hr {
@@ -149,7 +146,6 @@ form {
 .contact-infor > div > input,
 .shipping-address > div:not(:last-child) > select,
 .shipping-address > div:not(:last-child) > input {
-    --h-input: 56px;
     width: 100%;
     height: var(--h-input);
     border: 1px solid var(--gray-3);
@@ -163,7 +159,8 @@ form {
     outline: none;
 }
 .contact-infor > div > input:hover,
-.shipping-address > div:not(:last-child) > input:hover {
+.shipping-address > div:not(:last-child) > input:hover,
+.country > i:hover + input {
     border: 1.5px solid var(--gray-2);
 }
 .contact-infor > div > input:focus,
@@ -204,17 +201,51 @@ form {
 .shipping-address > div.postal-code::before {
     content: "markunread_mailbox";
 }
-.shipping-address > div.country::after {
-    font-family: "Material Icons";
+.shipping-address > div.country > i {
+    position: absolute;
     font-size: 30px;
     color: var(--gray-3);
-    position: absolute;
     background-color: var(--gray-5);
     border-radius: 4px;
     top: 37px;
     right: 13px;
-    content: "keyboard_arrow_down";
     cursor: pointer;
+}
+.country {
+    margin-right: 25px;
+}
+.country.show > input {
+    border: 2px solid var(--orange) !important;
+}
+.select-country {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: var(--fs-input);
+    color: var(--gray-1);
+    font-weight: inherit;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    overflow: hidden;
+    height: 0;
+    transition: 0.2s linear;
+}
+.select-country .option {
+    height: var(--h-input);
+    width: 100%;
+    border: solid var(--gray-3);
+    line-height: var(--h-input);
+    border-width: 0px 1px 1px 1px;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+.select-country .option:first-child {
+    border-width: 1px 1px 1px 1px;
+}
+.select-country .option:hover,
+.select-country .option.selected {
+    background-color: #f2a35d;
 }
 .checkbox {
     font-family: "Montserrat";
@@ -265,9 +296,6 @@ form {
     width: 5px;
     height: 12px;
     opacity: 1;
-}
-.country {
-    margin-right: 25px;
 }
 .country,
 .postal-code {
@@ -338,6 +366,7 @@ footer {
         --fs-contact-infor: 18px;
         --fs-label: 12px;
         --fs-input: 16px;
+        --h-input: 56px;
     }
     header {
         margin-top: 64px;
@@ -355,6 +384,12 @@ footer {
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .select-country .option {
+        padding-left: 50px;
+    }
+    .country.show .select-country {
+        height: 224px;
     }
     .col-1 {
         width: 8.33%;
@@ -403,6 +438,7 @@ footer {
         --fs-contact-infor: 14px;
         --fs-label: 10px;
         --fs-input: 12px;
+        --h-input: 40px;
     }
     header {
         margin-top: 32px;
@@ -423,8 +459,8 @@ footer {
     }
     .contact-infor > div > input,
     .shipping-address > div:not(:last-child) > select,
-    .shipping-address > div:not(:last-child) > input {
-        --h-input: 40px;
+    .shipping-address > div:not(:last-child) > input,
+    .select-country .option {
         padding-left: 37px;
     }
     .contact-infor > div::before,
@@ -433,10 +469,13 @@ footer {
         top: 33px;
         left: 8px;
     }
-    .shipping-address > div.country::after {
+    .shipping-address > div.country > i {
         font-size: 24px;
         top: 33px;
         right: 8px;
+    }
+    .country.show .select-country {
+        height: 160px;
     }
     [class*="col-"] {
         width: 100%;
