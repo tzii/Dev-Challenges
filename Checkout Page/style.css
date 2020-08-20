@@ -8,16 +8,6 @@
     --gray-6: #f2f2f2;
     --orange: #f2994a;
 }
-html {
-    --fs-header: 36px;
-    --fs-item-name: 16px;
-    --fs-discount: 16px;
-    --fs-non-discount: 12px;
-    --fs-shipping: 18px;
-    --fs-contact-infor: 18px;
-    --fs-label: 12px;
-    --fs-input: 16px;
-}
 * {
     margin: 0;
     padding: 0;
@@ -32,10 +22,6 @@ body {
     font-family: Montserrat;
     font-weight: 600;
 }
-header {
-    margin-top: 64px;
-    margin-bottom: 50px;
-}
 header h1 {
     font-weight: inherit;
 }
@@ -47,16 +33,12 @@ header h1 {
     background-color: var(--gray-6);
     padding: 30px;
     border-radius: 12px;
+    margin-bottom: 40px;
 }
 .item {
     display: flex;
     /* align-items: flex-start; */
     margin-bottom: 30px;
-}
-.item .thumbnail {
-    width: 135px;
-    overflow: hidden;
-    margin-right: 20px;
 }
 .item .thumbnail > img {
     width: 100%;
@@ -148,11 +130,8 @@ p.total > span:nth-child(2) {
 p.total {
     margin-bottom: 0px;
 }
-form{
+form {
     margin-bottom: 100px;
-}
-.contact-infor {
-    margin-bottom: 50px;
 }
 .contact-infor > h2,
 .shipping-address > h2 {
@@ -160,22 +139,19 @@ form{
     color: var(--gray-1);
     font-weight: inherit;
 }
-.contact-infor > div,
-.shipping-address > div {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+
 .contact-infor > div > label,
 .shipping-address > div:not(:last-child) > label {
-    position: relative;
     font-size: var(--fs-label);
     color: var(--gray-2);
     line-height: var(--fs-label);
 }
 .contact-infor > div > input,
+.shipping-address > div:not(:last-child) > select,
 .shipping-address > div:not(:last-child) > input {
+    --h-input: 56px;
     width: 100%;
-    height: 56px;
+    height: var(--h-input);
     border: 1px solid var(--gray-3);
     border-radius: 12px;
     margin-top: 5px;
@@ -183,46 +159,64 @@ form{
     color: var(--gray-1);
     font-weight: inherit;
     font-family: inherit;
-    padding-left: 56px;
+    padding-left: 50px;
+    outline: none;
 }
+.contact-infor > div > input:hover,
+.shipping-address > div:not(:last-child) > input:hover {
+    border: 1.5px solid var(--gray-2);
+}
+.contact-infor > div > input:focus,
+.shipping-address > div:not(:last-child) > input:focus {
+    border: 2px solid var(--orange);
+}
+
 .shipping-address > div:last-child > label > input {
     opacity: 0;
 }
-.contact-infor > div > label::before,
-.shipping-address > div:not(:last-child) > label::before {
+.contact-infor > div::before,
+.shipping-address > div:not(:last-child)::before {
     font-family: "Material Icons";
     font-size: 30px;
     color: var(--gray-3);
     position: absolute;
-    top: 49px;
+    top: 37px;
     left: 13px;
-    transform: translate(0, -50%);
-    content: "add";
 }
-.contact-infor > div > label[for="email"]::before {
+.contact-infor > div.email::before {
     content: "mail";
 }
-.contact-infor > div > label[for="phone"]::before {
+.contact-infor > div.phone::before {
     content: "phone";
 }
-.shipping-address > div > label[for="name"]::before {
+.shipping-address > div.full-name::before {
     content: "account_circle";
 }
-.shipping-address > div > label[for="address"]::before {
+.shipping-address > div.address::before {
     content: "home";
 }
-.shipping-address > div > label[for="city"]::before {
+.shipping-address > div.city::before {
     content: "location_city";
 }
-.shipping-address > div > label[for="country"]::before {
+.shipping-address > div.country::before {
     content: "public";
 }
-.shipping-address > div > label[for="code"]::before {
+.shipping-address > div.postal-code::before {
     content: "markunread_mailbox";
 }
-
+.shipping-address > div.country::after {
+    font-family: "Material Icons";
+    font-size: 30px;
+    color: var(--gray-3);
+    position: absolute;
+    background-color: var(--gray-5);
+    border-radius: 4px;
+    top: 37px;
+    right: 13px;
+    content: "keyboard_arrow_down";
+    cursor: pointer;
+}
 .checkbox {
-    position: relative;
     font-family: "Montserrat";
     font-size: var(--fs-ingredient-item);
     line-height: 25px;
@@ -286,12 +280,24 @@ form{
     display: flex;
     flex-direction: row-reverse;
 }
-.btn button{
+.btn button {
     width: 166px;
     height: 54px;
     background-color: var(--orange);
     border-radius: 12px;
     border: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+.btn button:hover {
+    background-color: #f28f37;
+}
+.btn button:focus {
+    background-color: #f28524;
 }
 footer {
     width: 100%;
@@ -321,39 +327,118 @@ footer {
     padding-left: 15px;
     padding-right: 15px;
 }
-.col-1 {
-    width: 8.33%;
+/* Responsive */
+@media screen and (min-width: 768px) {
+    html {
+        --fs-header: 36px;
+        --fs-item-name: 16px;
+        --fs-discount: 16px;
+        --fs-non-discount: 12px;
+        --fs-shipping: 18px;
+        --fs-contact-infor: 18px;
+        --fs-label: 12px;
+        --fs-input: 16px;
+    }
+    header {
+        margin-top: 64px;
+        margin-bottom: 50px;
+    }
+    .item .thumbnail {
+        width: 135px;
+        margin-right: 20px;
+    }
+    .contact-infor {
+        margin-bottom: 50px;
+    }
+    .contact-infor > div,
+    .shipping-address > div {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.67%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.67%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.67%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.67%;
+    }
+    .col-12 {
+        width: 100%;
+    }
 }
-.col-2 {
-    width: 16.67%;
-}
-.col-3 {
-    width: 25%;
-}
-.col-4 {
-    width: 33.33%;
-}
-.col-5 {
-    width: 41.67%;
-}
-.col-6 {
-    width: 50%;
-}
-.col-7 {
-    width: 58.33%;
-}
-.col-8 {
-    width: 66.67%;
-}
-.col-9 {
-    width: 75%;
-}
-.col-10 {
-    width: 83.33%;
-}
-.col-11 {
-    width: 91.67%;
-}
-.col-12 {
-    width: 100%;
+@media screen and (max-width: 768px) {
+    html {
+        --fs-header: 24px;
+        --fs-item-name: 12px;
+        --fs-discount: 14px;
+        --fs-non-discount: 10px;
+        --fs-shipping: 14px;
+        --fs-contact-infor: 14px;
+        --fs-label: 10px;
+        --fs-input: 12px;
+    }
+    header {
+        margin-top: 32px;
+        margin-bottom: 20px;
+    }
+    .item .thumbnail {
+        width: 122px;
+        margin-right: 20px;
+    }
+    .contact-infor {
+        margin-bottom: 45px;
+    }
+    .contact-infor > div,
+    .shipping-address > div {
+        position: relative;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .contact-infor > div > input,
+    .shipping-address > div:not(:last-child) > select,
+    .shipping-address > div:not(:last-child) > input {
+        --h-input: 40px;
+        padding-left: 37px;
+    }
+    .contact-infor > div::before,
+    .shipping-address > div:not(:last-child)::before {
+        font-size: 24px;
+        top: 33px;
+        left: 8px;
+    }
+    .shipping-address > div.country::after {
+        font-size: 24px;
+        top: 33px;
+        right: 8px;
+    }
+    [class*="col-"] {
+        width: 100%;
+    }
 }
