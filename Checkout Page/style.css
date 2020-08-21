@@ -7,6 +7,14 @@
     --gray-5: #e0e0e0;
     --gray-6: #f2f2f2;
     --orange: #f2994a;
+
+    --invalid-email: "Email is invalid";
+    --invalid-phone: "Please enter your number";
+    --invalid-name: "Please enter your name";
+    --invalid-address: "Please enter your address";
+    --invalid-city: "Please enter your city";
+    --invalid-country: "Please select your country";
+    --invalid-code: "Please enter postal code";
 }
 * {
     margin: 0;
@@ -18,12 +26,14 @@ a {
     color: inherit;
 }
 body {
+    position: relative;
     background-color: #ffffff;
     font-family: Montserrat;
     font-weight: 600;
 }
 header h1 {
     font-weight: inherit;
+    font-size: var(--fs-header);
 }
 .checkout {
     flex-direction: row-reverse;
@@ -173,33 +183,67 @@ form {
 }
 .contact-infor > div::before,
 .shipping-address > div:not(:last-child)::before {
+    position: absolute;
     font-family: "Material Icons";
     font-size: 30px;
     color: var(--gray-3);
-    position: absolute;
     top: 37px;
     left: 13px;
 }
 .contact-infor > div.email::before {
     content: "mail";
 }
+.contact-infor > div.email.invalid::after,
+.contact-infor > div.phone.invalid::after,
+.shipping-address > div.full-name.invalid::after,
+.shipping-address > div.address.invalid::after,
+.shipping-address > div.city.invalid::after,
+.shipping-address > div.country.invalid::after,
+.shipping-address > div.postal-code.invalid::after {
+    position: absolute;
+    top: var(--h-invalid);
+    left: 15px;
+    color: #d52b3b;
+    font-size: var(--fs-label);
+}
+.contact-infor > div.email.invalid::after {
+    content: var(--invalid-email);
+}
 .contact-infor > div.phone::before {
     content: "phone";
+}
+.contact-infor > div.phone.invalid::after {
+    content: var(--invalid-phone);
 }
 .shipping-address > div.full-name::before {
     content: "account_circle";
 }
+.shipping-address > div.full-name.invalid::after {
+    content: var(--invalid-name);
+}
 .shipping-address > div.address::before {
     content: "home";
+}
+.shipping-address > div.address.invalid::after {
+    content: var(--invalid-address);
 }
 .shipping-address > div.city::before {
     content: "location_city";
 }
+.shipping-address > div.city.invalid::after {
+    content: var(--invalid-city);
+}
 .shipping-address > div.country::before {
     content: "public";
 }
+.shipping-address > div.country.invalid::after {
+    content: var(--invalid-country);
+}
 .shipping-address > div.postal-code::before {
     content: "markunread_mailbox";
+}
+.shipping-address > div.postal-code.invalid::after {
+    content: var(--invalid-code);
 }
 .shipping-address > div.country > i {
     position: absolute;
@@ -337,6 +381,40 @@ footer {
     margin: 20px auto;
     color: #a9a9a9;
 }
+.alert {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--gray-6);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+}
+.alert.show {
+    visibility: visible;
+    top: 50%;
+    opacity: 1;
+    transition: 0.2s linear;
+}
+.alert .alert-title {
+    font-size: var(--fs-header);
+    margin-bottom: 20px;
+}
+.alert .ok-btn {
+    background-color: var(--orange);
+    padding: 10px 35px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
 .container {
     max-width: 992px;
     margin-left: auto;
@@ -367,6 +445,7 @@ footer {
         --fs-label: 12px;
         --fs-input: 16px;
         --h-input: 56px;
+        --h-invalid: 80px;
     }
     header {
         margin-top: 64px;
@@ -439,6 +518,7 @@ footer {
         --fs-label: 10px;
         --fs-input: 12px;
         --h-input: 40px;
+        --h-invalid: 64px;
     }
     header {
         margin-top: 32px;
