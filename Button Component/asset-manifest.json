@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.24ac9a1b.chunk.css",
-    "main.js": "./static/js/main.85f060a7.chunk.js",
-    "main.js.map": "./static/js/main.85f060a7.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.4e11e643.js",
-    "runtime-main.js.map": "./static/js/runtime-main.4e11e643.js.map",
-    "static/js/2.87ecdd85.chunk.js": "./static/js/2.87ecdd85.chunk.js",
-    "static/js/2.87ecdd85.chunk.js.map": "./static/js/2.87ecdd85.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.0d1494cd604fc72f90513716a7fbb0e5.js": "./precache-manifest.0d1494cd604fc72f90513716a7fbb0e5.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.24ac9a1b.chunk.css.map": "./static/css/main.24ac9a1b.chunk.css.map",
-    "static/js/2.87ecdd85.chunk.js.LICENSE.txt": "./static/js/2.87ecdd85.chunk.js.LICENSE.txt"
+    "main.css": "/Dev-Chanllenges/Button%20Component/static/css/main.24ac9a1b.chunk.css",
+    "main.js": "/Dev-Chanllenges/Button%20Component/static/js/main.85f060a7.chunk.js",
+    "main.js.map": "/Dev-Chanllenges/Button%20Component/static/js/main.85f060a7.chunk.js.map",
+    "runtime-main.js": "/Dev-Chanllenges/Button%20Component/static/js/runtime-main.7b2c9973.js",
+    "runtime-main.js.map": "/Dev-Chanllenges/Button%20Component/static/js/runtime-main.7b2c9973.js.map",
+    "static/js/2.87ecdd85.chunk.js": "/Dev-Chanllenges/Button%20Component/static/js/2.87ecdd85.chunk.js",
+    "static/js/2.87ecdd85.chunk.js.map": "/Dev-Chanllenges/Button%20Component/static/js/2.87ecdd85.chunk.js.map",
+    "index.html": "/Dev-Chanllenges/Button%20Component/index.html",
+    "precache-manifest.2a2ba02f22114ebac19572a6bafa7a7e.js": "/Dev-Chanllenges/Button%20Component/precache-manifest.2a2ba02f22114ebac19572a6bafa7a7e.js",
+    "service-worker.js": "/Dev-Chanllenges/Button%20Component/service-worker.js",
+    "static/css/main.24ac9a1b.chunk.css.map": "/Dev-Chanllenges/Button%20Component/static/css/main.24ac9a1b.chunk.css.map",
+    "static/js/2.87ecdd85.chunk.js.LICENSE.txt": "/Dev-Chanllenges/Button%20Component/static/js/2.87ecdd85.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4e11e643.js",
+    "static/js/runtime-main.7b2c9973.js",
     "static/js/2.87ecdd85.chunk.js",
     "static/css/main.24ac9a1b.chunk.css",
     "static/js/main.85f060a7.chunk.js"
